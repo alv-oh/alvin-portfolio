@@ -1,0 +1,69 @@
+/* =========================================
+   Global Design Variables
+   ========================================= */
+:root {
+    --bg-primary: #ffffff;
+    --text-primary: #2d3142;
+    --dark-bg: #0f172a;
+    --accent-color: #f97316; /* Vibrant Orange representing energy/culture */
+    --accent-hover: #ea580c;
+    --transition-speed: 0.3s;
+}
+
+/* Base Reset & Typography */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   Custom Utility Classes
+   ========================================= */
+.bg-dark-custom {
+    background-color: var(--dark-bg) !important;
+}
+
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
+.bg-accent {
+    background-color: var(--accent-color) !important;
+}
+
+.tracking-wide {
+    letter-spacing: 0.05em;
+}
+
+/* =========================================
+   Component Overrides
+   ========================================= */
+.btn-accent {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #ffffff;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-accent:hover, .btn-accent:focus {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   Hero Section Layout
+   ========================================= */
+.hero-section {
+    min-height: 80vh;
+    background-color: var(--dark-bg);
+    /* Future implementation: Add an optimized WebP background image */
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8));
+    background-size: cover;
+    background-position: center;
+}
