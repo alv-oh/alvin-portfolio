@@ -1,69 +1,157 @@
-/* =========================================
-   Global Design Variables
-   ========================================= */
+/* ================================================
+   ALVIN PORTFOLIO — Simple Design System
+   ================================================ */
+
 :root {
-    --bg-primary: #ffffff;
-    --text-primary: #2d3142;
-    --dark-bg: #0f172a;
-    --accent-color: #f97316; /* Vibrant Orange representing energy/culture */
-    --accent-hover: #ea580c;
-    --transition-speed: 0.3s;
+  --green:      #0A7C4E;
+  --green-dark: #086B43;
+  --cream:      #F5F0E8;
+  --ink:        #1A1A1A;
+  --ink-soft:   #555555;
+  --surface:    #FFFFFF;
+  --border:     #E0DCD0;
+  --nav-bg:     #1A1A1A;
+
+  --font-heading: 'Poppins', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  --radius: 10px;
 }
 
-/* Base Reset & Typography */
+[data-theme="dark"] {
+  --cream:    #121212;
+  --surface:  #1E1E1E;
+  --ink:      #F0F0F0;
+  --ink-soft: #B5B5B5;
+  --border:   #333333;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    color: var(--text-primary);
-    background-color: var(--bg-primary);
-    -webkit-font-smoothing: antialiased;
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
 }
 
-/* =========================================
-   Custom Utility Classes
-   ========================================= */
-.bg-dark-custom {
-    background-color: var(--dark-bg) !important;
+img { max-width: 100%; }
+a { color: var(--green); text-decoration: none; }
+a:hover { color: var(--green-dark); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
 }
 
-.text-accent {
-    color: var(--accent-color) !important;
+h1 { font-size: 2.6rem; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.3rem; }
+
+p { color: var(--ink-soft); margin-bottom: 1rem; }
+
+/* Navbar */
+.navbar-dark.bg-custom {
+  background-color: var(--nav-bg) !important;
 }
 
-.bg-accent {
-    background-color: var(--accent-color) !important;
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--green) !important;
 }
 
-.tracking-wide {
-    letter-spacing: 0.05em;
+.nav-link {
+  color: rgba(255,255,255,0.75) !important;
 }
 
-/* =========================================
-   Component Overrides
-   ========================================= */
-.btn-accent {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    color: #ffffff;
-    font-weight: 600;
-    transition: all var(--transition-speed) ease;
+.nav-link:hover, .nav-link.active {
+  color: #fff !important;
 }
 
-.btn-accent:hover, .btn-accent:focus {
-    background-color: var(--accent-hover);
-    border-color: var(--accent-hover);
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.theme-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
 }
 
-/* =========================================
-   Hero Section Layout
-   ========================================= */
-.hero-section {
-    min-height: 80vh;
-    background-color: var(--dark-bg);
-    /* Future implementation: Add an optimized WebP background image */
-    background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8));
-    background-size: cover;
-    background-position: center;
+.theme-btn:hover {
+  background: var(--green);
+  border-color: var(--green);
 }
+
+/* Hero */
+.hero {
+  background: var(--nav-bg);
+  color: #fff;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero h1 { color: #fff; }
+.hero h1 span { color: var(--green); }
+
+.hero p {
+  color: rgba(255,255,255,0.7);
+  max-width: 500px;
+  margin: 1rem auto 2rem;
+}
+
+/* Buttons */
+.btn-green {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.6rem;
+  border-radius: 30px;
+}
+
+.btn-green:hover {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+  color: #fff;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.6rem;
+  border-radius: 30px;
+}
+
+.btn-outline-custom:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Cards */
+.card-simple {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  height: 100%;
+}
+
+/* Sections */
+.section { padding: 4rem 0; }
+
+/* Footer */
+.footer-custom {
+  background: var(--nav-bg);
+  color: rgba(255,255,255,0.6);
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.footer-custom a { color: rgba(255,255,255,0.6); }
+.footer-custom a:hover { color: var(--green); }
