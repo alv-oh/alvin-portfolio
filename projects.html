@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Alvin, including AirtimeX — a full-stack fintech app." />
+  <title>Projects — Alvin</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Alvin</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item ms-2">
+          <button class="theme-btn" id="theme-btn">Dark mode</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="hero" style="padding: 3.5rem 0;">
+  <div class="container">
+    <h1>My <span>Projects</span></h1>
+    <p>Things I've built, end to end.</p>
+  </div>
+</section>
+
+<!-- ============ FEATURED: AIRTIMEX ============ -->
+<section class="section">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+
+      <div class="col-lg-7">
+        <h2>AirtimeX</h2>
+        <p>
+          AirtimeX is a full-stack fintech mobile app that lets Safaricom users
+          convert spare airtime into M-Pesa mobile money. It's a real problem —
+          people often have unused airtime but need cash — and AirtimeX solves it
+          directly.
+        </p>
+        <p>
+          I built the entire stack myself: the frontend is React Native using
+          Expo, shipped as a working Android APK via EAS Build. The backend runs
+          on Node.js and Express, with a PostgreSQL database handling users,
+          wallets, and transaction history. Authentication is handled with JWT,
+          and there's a basic KYC flow plus an admin panel for managing
+          transactions.
+        </p>
+        <p>
+          The trickiest part was integrating the Safaricom Daraja API sandbox to
+          actually move money between airtime and M-Pesa — getting the request
+          signing, callbacks, and error handling right took real debugging, not
+          just following a tutorial. The whole thing is deployed and running on
+          Railway.
+        </p>
+
+        <div class="card-simple mb-4">
+          <h4>Tech Stack</h4>
+          <ul>
+            <li>React Native (Expo) — frontend, built into an Android APK</li>
+            <li>Node.js / Express — backend API</li>
+            <li>PostgreSQL — database</li>
+            <li>JWT — authentication</li>
+            <li>Safaricom Daraja API — airtime-to-M-Pesa conversion</li>
+            <li>Railway — deployment</li>
+          </ul>
+        </div>
+
+        <a href="https://github.com/alv-oh" target="_blank" rel="noopener" class="btn btn-green">View on GitHub</a>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card-simple">
+          <h4>Example API Call</h4>
+          <pre style="white-space: pre-wrap; font-size: 0.85rem; color: var(--ink-soft);"><code>POST /api/convert
+{
+  "phone": "07XXXXXXXX",
+  "amount": 50,
+  "provider": "safaricom"
+}
+
+&rarr; 200 OK
+{
+  "status": "success",
+  "mpesa_ref": "QK3A7...",
+  "converted": 47.50
+}</code></pre>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ OTHER PROJECTS ============ -->
+<section class="section" style="background: var(--surface);">
+  <div class="container">
+    <h2 class="mb-4">Other Things I've Built</h2>
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="card-simple">
+          <h3>Java RMI Distributed System</h3>
+          <p>
+            A networked Java application spanning three machines, built as a
+            group project. I served as the server node, integrating MySQL and
+            JavaFX to handle requests across the network using Java's Remote
+            Method Invocation.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-simple">
+          <h3>Minna no Nihongo Companion</h3>
+          <p>
+            A vocabulary and grammar reference app built while studying Japanese,
+            following the Minna no Nihongo curriculum. Helps track particles,
+            vocab, and grammar points as I work through each lesson.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer-custom">
+  <div class="container">
+    <p class="mb-2">&copy; 2026 Alvin. Strathmore University, BICS.</p>
+    <a href="https://github.com/alv-oh" target="_blank" rel="noopener">github.com/alv-oh</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
