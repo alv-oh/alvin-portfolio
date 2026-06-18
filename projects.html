@@ -53,27 +53,26 @@
     <div class="row g-5 align-items-start">
 
       <div class="col-lg-7">
-        <h2>AirtimeX</h2>
+        <h2>AirtimeX <span style="font-size: 0.9rem; color: var(--ink-soft); font-weight: 400;">— paused</span></h2>
         <p>
           AirtimeX is a full-stack fintech mobile app that lets Safaricom users
-          convert spare airtime into M-Pesa mobile money. It's a real problem —
-          people often have unused airtime but need cash — and AirtimeX solves it
-          directly.
+          convert spare airtime into M-Pesa mobile money. The project is currently
+          paused while I focus on coursework, but the core architecture is built
+          and the basic conversion flow works in testing.
         </p>
         <p>
-          I built the entire stack myself: the frontend is React Native using
-          Expo, shipped as a working Android APK via EAS Build. The backend runs
-          on Node.js and Express, with a PostgreSQL database handling users,
-          wallets, and transaction history. Authentication is handled with JWT,
-          and there's a basic KYC flow plus an admin panel for managing
-          transactions.
+          I built the full stack: React Native frontend using Expo, a Node.js and
+          Express backend, PostgreSQL database handling users and transaction
+          history, and JWT authentication. The Daraja API sandbox integration
+          for the actual airtime-to-M-Pesa conversion is in place and working
+          in test mode.
         </p>
         <p>
-          The trickiest part was integrating the Safaricom Daraja API sandbox to
-          actually move money between airtime and M-Pesa — getting the request
-          signing, callbacks, and error handling right took real debugging, not
-          just following a tutorial. The whole thing is deployed and running on
-          Railway.
+          What's left before it's production-ready: proper error handling for
+          partial transaction failures, a retry queue for failed M-Pesa callbacks,
+          and real device testing beyond my own phone. I learned the hard way that
+          anything touching money needs rollback logic before it touches real users —
+          that's the main thing this project has taught me so far.
         </p>
 
         <div class="card-simple mb-4">

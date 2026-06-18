@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog by Alvin — writing on tech, AI in Africa, and culture." />
+  <title>Blog — Alvin</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Alvin</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item ms-2">
+          <button class="theme-btn" id="theme-btn">Dark mode</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="hero" style="padding: 3.5rem 0;">
+  <div class="container">
+    <h1>The <span>Blog</span></h1>
+    <p>Writing on tech, AI in Africa, and culture.</p>
+  </div>
+</section>
+
+<!-- ============ BLOG POSTS ============ -->
+<section class="section">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Post 1 -->
+      <div class="col-12">
+        <div class="card-simple">
+          <p style="font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.4rem;">June 10, 2026 &nbsp;·&nbsp; Tech</p>
+          <h3>What building AirtimeX taught me before I had to pause it</h3>
+          <p>
+            AirtimeX is currently on pause. I want to be upfront about that, because I think
+            there's more to learn from an honest account of why a project stalls than from
+            a tidy success story.
+          </p>
+          <p>
+            The idea was straightforward: let Safaricom users convert spare airtime to
+            M-Pesa mobile money. I got the core stack running — React Native frontend,
+            Node.js and Express backend, PostgreSQL database, Daraja API integration in
+            the sandbox environment. The basic conversion flow worked in testing. Then
+            coursework picked up, the semester got heavier, and the project went into a
+            folder I keep meaning to reopen.
+          </p>
+          <p>
+            What I actually learned before pausing: the Daraja API is genuinely tricky.
+            Getting the STK push callbacks right, handling partial transaction failures,
+            making sure money doesn't disappear between the airtime side and the M-Pesa
+            confirmation — none of that is simple, and I hadn't thought carefully enough
+            about error handling when I started. That's the real lesson. Not "shipping is
+            hard" in the abstract, but specifically: anything that touches money needs
+            rollback logic and retry handling before it touches real users, not after.
+          </p>
+          <p style="margin: 0;">
+            I'll pick it back up. The repo is still there, the architecture still makes
+            sense, and the problem is still real. Right now it's just waiting for a
+            semester with more hours in it.
+          </p>
+        </div>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="col-12">
+        <div class="card-simple">
+          <p style="font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.4rem;">May 28, 2026 &nbsp;·&nbsp; AI / Africa</p>
+          <h3>AI in Africa isn't a niche — it's the main event</h3>
+          <p>
+            There's a version of the AI conversation that treats Africa as a laggard —
+            a continent that will eventually "catch up" to wherever Silicon Valley currently
+            is. That framing gets everything backwards.
+          </p>
+          <p>
+            Africa has the youngest population on earth, the fastest-growing mobile
+            internet adoption, and a set of problems — logistics, agriculture, healthcare,
+            financial inclusion — that are genuinely hard and genuinely unsolved. These are
+            exactly the problems where AI has the most to contribute, not the ones where it's
+            marginal (recommending the next Netflix show, optimising ad spend for someone
+            who already has money).
+          </p>
+          <p>
+            The gap isn't in potential. It's in training data. Most large language models
+            were trained on English-dominant internet text, which means they perform worse
+            on Swahili, Sheng, Yoruba, Zulu — the actual languages people in this continent
+            think and speak in. A model that can't understand how people actually communicate
+            can't solve their actual problems.
+          </p>
+          <p>
+            What interests me is building at this layer — not fine-tuning GPT-4 for an
+            African use case, but thinking about what data collection, model design, and
+            deployment look like when the user is in Kibera or Kano, on a 2G connection,
+            in a language the model barely knows. That's a harder and more interesting
+            problem than most of what gets called "AI research" in the mainstream.
+          </p>
+          <p style="margin: 0;">
+            I don't have the answers yet. I'm a second-year student. But I'm paying attention,
+            and I think the people who solve this will build some of the most important
+            technology of the next decade.
+          </p>
+        </div>
+      </div>
+
+      <!-- Post 3 -->
+      <div class="col-12">
+        <div class="card-simple">
+          <p style="font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.4rem;">May 12, 2026 &nbsp;·&nbsp; Culture</p>
+          <h3>Early notes toward an essay on Afrobeats and the Griot tradition</h3>
+          <p>
+            This isn't a finished essay. It's more like notes I keep coming back to —
+            an argument I'm still working out, that I'm putting here partly to hold myself
+            accountable to actually finishing it.
+          </p>
+          <p>
+            The central idea: Afrobeats didn't come from nowhere. The global success of
+            artists like Wizkid is downstream of something much older — the Griot tradition
+            of West Africa, where music was never entertainment separate from life but was
+            embedded in everything: work, ceremony, grief, memory. The Griot was a living
+            archive, passing history forward through rhythm and song before there was
+            writing to do it.
+          </p>
+          <p>
+            I've been reading J.H. Kwabena Nketia's work on African music, and one thing
+            keeps sitting with me: the continuity. The drum as communication. The idea that
+            a song can hold an entire community's identity — not as metaphor, but as
+            actual function. When I listen to "Ojuelegba" I think about that. A
+            neighbourhood compressed into three minutes. That's not a new idea dressed in
+            new sounds. That's inheritance.
+          </p>
+          <p style="margin: 0;">
+            What I want to argue, eventually, is that global consumption of Afrobeats
+            isn't the same as global understanding of it. Streams don't equal comprehension.
+            But I haven't figured out how to make that argument properly yet. These are
+            early notes. I'll write the real version when I'm ready.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer-custom">
+  <div class="container">
+    <p class="mb-2">&copy; 2026 Alvin. Strathmore University, BICS.</p>
+    <a href="https://github.com/alv-oh" target="_blank" rel="noopener">github.com/alv-oh</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
