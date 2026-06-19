@@ -16,6 +16,8 @@
   --font-body:    'Inter', sans-serif;
 
   --radius: 10px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-hover: 0 8px 24px rgba(0,0,0,0.12);
 }
 
 [data-theme="dark"] {
@@ -24,6 +26,8 @@
   --ink:      #F0F0F0;
   --ink-soft: #B5B5B5;
   --border:   #333333;
+  --shadow: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-hover: 0 8px 24px rgba(0,0,0,0.5);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,6 +37,7 @@ body {
   background: var(--cream);
   color: var(--ink);
   line-height: 1.7;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img { max-width: 100%; }
@@ -65,10 +70,28 @@ p { color: var(--ink-soft); margin-bottom: 1rem; }
 
 .nav-link {
   color: rgba(255,255,255,0.75) !important;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0.8rem;
+  right: 0.8rem;
+  height: 2px;
+  background: var(--green);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
 }
 
 .nav-link:hover, .nav-link.active {
   color: #fff !important;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  transform: scaleX(1);
 }
 
 .theme-btn {
@@ -88,7 +111,7 @@ p { color: var(--ink-soft); margin-bottom: 1rem; }
 
 /* Hero */
 .hero {
-  background: var(--nav-bg);
+  background: linear-gradient(135deg, var(--nav-bg) 0%, #0d2818 100%);
   color: #fff;
   padding: 5rem 0;
   text-align: center;
@@ -111,12 +134,15 @@ p { color: var(--ink-soft); margin-bottom: 1rem; }
   font-weight: 600;
   padding: 0.6rem 1.6rem;
   border-radius: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-green:hover {
   background: var(--green-dark);
   border-color: var(--green-dark);
   color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
 .btn-outline-custom {
@@ -126,11 +152,13 @@ p { color: var(--ink-soft); margin-bottom: 1rem; }
   font-weight: 600;
   padding: 0.6rem 1.6rem;
   border-radius: 30px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-outline-custom:hover {
   border-color: #fff;
   color: #fff;
+  transform: translateY(-2px);
 }
 
 /* Cards */
@@ -140,6 +168,13 @@ p { color: var(--ink-soft); margin-bottom: 1rem; }
   border-radius: var(--radius);
   padding: 1.5rem;
   height: 100%;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-simple:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
 
 /* Sections */
