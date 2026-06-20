@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This production-ready web application serves as my professional portfolio. As a BBIT student at Strathmore University, I am passionate about bridging technology with real-world solutions. This site showcases my journey, detailing projects like my flagship application "AirtimeX", my ongoing research into AI/ML, and my literary exploration of African culture.
+This production-ready web application serves as my professional portfolio. As a BICS student at Strathmore University, I am passionate about bridging technology with real-world solutions. This site showcases my journey, detailing projects like my flagship application "AirtimeX", my ongoing research into AI/ML, and my literary exploration of African culture.
 
 ## Architecture & Tech Stack
 
@@ -14,4 +14,4 @@ This production-ready web application serves as my professional portfolio. As a 
 ## Developer
 
 **Alvin**
-BBIT Student, Strathmore University.
+BICS Student, Strathmore University.
