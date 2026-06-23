@@ -190,3 +190,26 @@ p { color: var(--ink-soft); margin-bottom: 1rem; }
 
 .footer-custom a { color: rgba(255,255,255,0.6); }
 .footer-custom a:hover { color: var(--green); }
+
+/* Form validation */
+.error-text {
+  color: #c0392b;
+  font-size: 0.82rem;
+  display: block;
+  min-height: 1.1rem;
+  margin-top: 0.25rem;
+}
+
+.input-invalid {
+  border-color: #c0392b !important;
+}
+
+.success-box {
+  background: rgba(10,124,78,0.1);
+  border: 1px solid var(--green);
+  color: var(--green-dark);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 1.25rem;
+  font-size: 0.92rem;
+}
