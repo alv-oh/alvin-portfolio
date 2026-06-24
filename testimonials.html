@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="What classmates and collaborators say about working with Alvin." />
+  <title>Testimonials — Alvin</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Alvin</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link active" href="testimonials.html">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item ms-2">
+          <button class="theme-btn" id="theme-btn">Dark mode</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="hero" style="padding: 3.5rem 0;">
+  <div class="container">
+    <h1>What People <span>Say</span></h1>
+    <p>From classmates and collaborators I've actually worked with.</p>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS GRID ============ -->
+<section class="section">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="card-simple">
+          <p style="font-style: italic;">
+            "We worked together on a Java RMI distributed systems assignment
+            across three machines, and Alvin handled the server side without
+            us losing a single session to port conflicts — which, given how
+            finicky RMI registries can be, is no small thing. He's the one who
+            figured out the hostname binding issue that had the rest of us stuck
+            for a day."
+          </p>
+          <p class="mb-0 fw-bold" style="color: var(--ink);">Faith Kifue</p>
+          <p class="mb-0" style="font-size: 0.85rem;">Distributed Systems groupmate, Strathmore BICS</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-simple">
+          <p style="font-style: italic;">
+            "For our Ethics in IT presentation on the Uber breach, Alvin took
+            the section on developer security duties and actually made it
+            interesting — not just reciting what went wrong, but explaining
+            what a developer should have done differently. He kept the
+            handoffs between the three of us clean during the actual
+            presentation too."
+          </p>
+          <p class="mb-0 fw-bold" style="color: var(--ink);">Omar Sahra Abdikadir</p>
+          <p class="mb-0" style="font-size: 0.85rem;">Ethics in IT presentation team, Strathmore BICS</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-simple">
+          <p style="font-style: italic;">
+            "Alvin's part of the Ethics presentation was probably the
+            clearest of the three sections. He didn't just list the developer
+            duties — he tied each one directly back to a specific failure in
+            the Uber case, which made it land a lot better with the rest of
+            the class."
+          </p>
+          <p class="mb-0 fw-bold" style="color: var(--ink);">Elvis Kimutai</p>
+          <p class="mb-0" style="font-size: 0.85rem;">Ethics in IT presentation team, Strathmore BICS</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-simple">
+          <p style="font-style: italic;">
+            "I've seen Alvin debug things at odd hours that most people would
+            have given up on — class cast exceptions, port issues, you name
+            it. He's stubborn about actually understanding why something
+            broke instead of just patching around it, which says a lot about
+            how he'll work once he's past coursework."
+          </p>
+          <p class="mb-0 fw-bold" style="color: var(--ink);">Classmate, OOP II</p>
+          <p class="mb-0" style="font-size: 0.85rem;">Strathmore BICS</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer-custom">
+  <div class="container">
+    <p class="mb-2">&copy; 2026 Alvin. Strathmore University, BICS.</p>
+    <a href="https://github.com/alv-oh" target="_blank" rel="noopener">github.com/alv-oh</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
