@@ -13,7 +13,7 @@
 <body>
 
 <!-- ============ NAVBAR ============ -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top">
+<nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">Alvin</a>
 
@@ -38,9 +38,10 @@
     </div>
   </div>
 </nav>
+<main>
 
 <!-- ============ PAGE HEADER ============ -->
-<section class="hero" style="padding: 3.5rem 0;">
+<section class="hero py-5">
   <div class="container">
     <h1>My <span>Projects</span></h1>
     <p>Things I've built, end to end.</p>
@@ -53,7 +54,7 @@
     <div class="row g-5 align-items-start">
 
       <div class="col-lg-7">
-        <h2>AirtimeX <span style="font-size: 0.9rem; color: var(--ink-soft); font-weight: 400;">— paused</span></h2>
+        <h2>AirtimeX <span class="text-muted small">— paused</span></h2>
         <p>
           AirtimeX is a full-stack fintech mobile app that lets Safaricom users
           convert spare airtime into M-Pesa mobile money. The project is currently
@@ -93,7 +94,7 @@
       <div class="col-lg-5">
         <div class="card-simple">
           <h4>Example API Call</h4>
-          <pre style="white-space: pre-wrap; font-size: 0.85rem; color: var(--ink-soft);"><code>POST /api/convert
+          <pre class="small text-muted"><code>POST /api/convert
 {
   "phone": "07XXXXXXXX",
   "amount": 50,
@@ -114,7 +115,7 @@
 </section>
 
 <!-- ============ FILTERABLE PROJECT GALLERY ============ -->
-<section class="section" style="background: var(--surface);">
+<section class="section bg-body">
   <div class="container">
 
     <h2 class="mb-2">All Projects</h2>
@@ -161,6 +162,7 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
+</main>
 <footer class="footer-custom">
   <div class="container">
     <p class="mb-2">&copy; 2026 Alvin. Strathmore University, BICS.</p>
