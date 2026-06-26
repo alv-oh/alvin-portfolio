@@ -13,11 +13,11 @@
 <body>
 
 <!-- ============ NAVBAR ============ -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top" aria-label="Main navigation">
   <div class="container">
     <a class="navbar-brand" href="index.html">Alvin</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation menu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -32,12 +32,14 @@
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
         <li class="nav-item ms-2">
-          <button class="theme-btn" id="theme-btn">Dark mode</button>
+          <button class="theme-btn" id="theme-btn" aria-label="Toggle dark and light mode">Dark mode</button>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<main>
 
 <!-- ============ PAGE HEADER ============ -->
 <section class="hero" style="padding: 3.5rem 0;">
@@ -53,6 +55,9 @@
     <div class="row g-5 align-items-start">
 
       <div class="col-lg-7">
+        <img src="assets/images/profile.jpg"
+             alt="Alvin, a BICS student at Strathmore University"
+             class="profile-photo mb-4">
         <h2>Who I Am</h2>
         <p>
           I'm Alvin, a second-year Bachelor of Informatics and Computer Science
@@ -92,6 +97,8 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
+</main>
+
 <footer class="footer-custom">
   <div class="container">
     <p class="mb-2">&copy; 2026 Alvin. Strathmore University, BICS.</p>

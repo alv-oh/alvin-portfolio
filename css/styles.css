@@ -285,3 +285,12 @@ p { color: var(--ink-soft); margin-bottom: 1rem; }
   padding: 0.25rem 0.65rem;
   border-radius: 4px;
 }
+
+/* Profile photo */
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--green);
+}
