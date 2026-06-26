@@ -244,3 +244,44 @@ p { color: var(--ink-soft); margin-bottom: 1rem; }
 .accordion-body {
   color: var(--ink-soft);
 }
+
+/* Filter bar (projects gallery) */
+.filter-bar {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+  border-radius: 30px;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--green);
+  color: var(--green-dark);
+}
+
+.filter-btn.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+/* Tag pill (used inside project cards) */
+.tag-pill {
+  display: inline-block;
+  background: rgba(10,124,78,0.1);
+  color: var(--green-dark);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+}

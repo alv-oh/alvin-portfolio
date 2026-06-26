@@ -113,36 +113,50 @@
   </div>
 </section>
 
-<!-- ============ OTHER PROJECTS ============ -->
+<!-- ============ FILTERABLE PROJECT GALLERY ============ -->
 <section class="section" style="background: var(--surface);">
   <div class="container">
-    <h2 class="mb-4">Other Things I've Built</h2>
-    <div class="row g-4">
 
-      <div class="col-md-6">
+    <h2 class="mb-2">All Projects</h2>
+    <p class="mb-4">Filter by category to see specific types of work.</p>
+
+    <!-- Filter buttons -->
+    <div class="filter-bar mb-4">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="academic">Academic</button>
+    </div>
+
+    <!-- Project cards -->
+    <div class="row g-4" id="projectGallery">
+
+      <div class="col-md-4 project-item" data-category="mobile backend">
         <div class="card-simple">
-          <h3>Java RMI Distributed System</h3>
-          <p>
-            A networked Java application spanning three machines, built as a
-            group project. I served as the server node, integrating MySQL and
-            JavaFX to handle requests across the network using Java's Remote
-            Method Invocation.
-          </p>
+          <span class="tag-pill">Mobile · Backend</span>
+          <h3 class="mt-2">AirtimeX</h3>
+          <p>Fintech app converting airtime to M-Pesa. React Native, Node.js, PostgreSQL. Currently paused.</p>
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-4 project-item" data-category="backend academic">
         <div class="card-simple">
-          <h3>Minna no Nihongo Companion</h3>
-          <p>
-            A vocabulary and grammar reference app built while studying Japanese,
-            following the Minna no Nihongo curriculum. Helps track particles,
-            vocab, and grammar points as I work through each lesson.
-          </p>
+          <span class="tag-pill">Backend · Academic</span>
+          <h3 class="mt-2">Java RMI Distributed System</h3>
+          <p>Networked Java app across three machines. Server-side logic, MySQL, and JavaFX over Java RMI.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 project-item" data-category="academic">
+        <div class="card-simple">
+          <span class="tag-pill">Academic</span>
+          <h3 class="mt-2">Minna no Nihongo Companion</h3>
+          <p>A vocabulary and grammar reference tool built while studying Japanese, tracking particles and vocab by lesson.</p>
         </div>
       </div>
 
     </div>
+
   </div>
 </section>
 
@@ -156,5 +170,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
 </body>
 </html>
