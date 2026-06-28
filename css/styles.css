@@ -341,8 +341,8 @@ h3 i {
 
 /* Profile photo */
 .profile-photo {
-  width: 160px;
-  height: 160px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid var(--green);
